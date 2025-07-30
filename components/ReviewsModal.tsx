@@ -4,6 +4,7 @@ import closeButton from "../assets/images/Close Button.png";
 import carPhoto from "../assets/images/resizer-4.png";
 import Ellipse from '../assets/images/Group 21.png'
 import ModalComponent from '@/components/Reviews';
+import Carousel from "./Carousel";
 
 type Props = PropsWithChildren<{
   isVisible: boolean;
@@ -39,25 +40,12 @@ export default function ReviewsModal({
             </Pressable>
           </View>
 
-          <View className="relative pb-4  mt-5">
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              className="pl-4"
-            >
-              {images.map((url, index) => (
-                <Image
-                  key={index}
-                  source={carPhoto}
-                  className="w-32 h-32 mr-4 rounded-lg"
-                  resizeMode="cover"
-                />
-              ))}
-            </ScrollView>
-            <Image source={Ellipse} className="absolute bottom-0 left-[40%]"></Image>
-          </View>
-          <View className="px-8 mt-5">
-            <Text className="font-extrabold text-xl">Customer reviews</Text>
+      
+
+       
+          <View className="px-6 mt-5">
+                <Carousel></Carousel>
+            <Text className="font-extrabold text-xl mt-5">Customer reviews</Text>
             <Text className="leading-[22px] mt-2 opacity-50">
               My first wash on car was fast and I'm beyond delighted. I
               requested a basic based wash on tiny zone. I’m impressed. The fun
